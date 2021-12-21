@@ -1,0 +1,174 @@
+/* Header Style */
+.Logo {
+    text-align: left !important;
+    font-size: 50px;
+    font-weight: bold;
+    color: yellow;
+    font-style: italic;
+    font-family: sans-serif;
+    text-shadow: 0 0 30px rgba(255, 255, 0, 0.651);
+}
+
+.PlayButton {
+    border: none;
+    outline: none;
+    padding: 5% 20%;
+    border-radius: 30px;
+    color: rgb(255, 174, 0);
+    background-color: #130139;
+    box-shadow: 0 0 5px rgb(255, 174, 0);
+    transition: all 0.3s;
+}
+
+.PlayButton:hover {
+    box-shadow: 0 0 20px rgb(255, 174, 0);
+}
+
+/* Main Style */
+.back1 {
+    background-image: url("../img/part1back.png");
+    background-position-y: -500px;
+}
+
+.back2 {
+    background-image: url("../img/part2back.png");
+    background-position: 50;
+}
+
+.header_container {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainTitle {
+    margin-top: 50%;
+    transform: translate(0, -25%);
+}
+
+.title {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+.center_container {
+    width: 100%;
+    height: 100%;
+}
+
+.markPlay {
+    border: none;
+    outline: none;
+    padding: 1% 10%;
+    margin-top: 20px;
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+    transition: all 0.3s;
+}
+
+.markPlay:hover {
+    box-shadow: 0 0 25px yellow;
+}
+
+/* Footer Style */
+.footer_Container {
+    width: 100%;
+    background-color: #1a0c44;
+}
+
+/* Responsible Style */
+@media screen and (max-width: 1000px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mainTitle {
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Logo {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Logo {
+        font-size: 30px;
+    }
+}
+
+/*---------- Buy Coin ----------*/
+.coinlogo {
+    margin: 30px;
+    width: 80%;
+}
+
+.saleBlock {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 50%), transparent);
+    padding: 20px;
+    padding-right: 30px;
+    padding-bottom: 10%;
+    border-radius: 20px;
+}
+
+.buyButton {
+    outline: 0;
+    border: 0;
+
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    background: linear-gradient(to bottom, rgb(255, 230, 0), yellow);
+    border: 3px solid rgb(255, 230, 0);
+
+    padding: 0.5% 0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 300px;
+}
+
+.buyButton:hover {
+    color: rgb(255, 230, 0);
+    background: rgb(34, 34, 34);
+}
+
+.contactSet {
+    display: flex;
+    border: 1px solid white;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.contactAddress {
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 70px;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    width: 0px;
+    height: 0px;
+}

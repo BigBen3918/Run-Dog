@@ -1,0 +1,121 @@
+.center {
+    text-align: center !important;
+}
+
+.align_left {
+    text-align: left;
+}
+
+.space-single {
+    height: 20px;
+}
+
+.space-double {
+    height: 50px;
+}
+
+/* yellow font*/
+.x_font_y_1 {
+    color: yellow;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.x_font_y_2 {
+    color: yellow;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.x_font_y_3 {
+    color: yellow;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+}
+
+.x_font_y_4 {
+    color: yellow;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* white font*/
+.x_font_w_1 {
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.x_font_w_2 {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.x_font_w_3 {
+    color: white;
+    font-size: 30px !important;
+}
+
+.x_font_w_4 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/**/
+.overflow_card {
+    word-break: break-all
+}
+
+
+@media screen and (max-width: 600px) {
+    .x_font_y_1 {
+        color: yellow;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .x_font_y_2 {
+        color: yellow;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .x_font_y_3 {
+        color: yellow;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .x_font_y_4 {
+        color: yellow;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+
+    /* white font*/
+    .x_font_w_1 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .x_font_w_2 {
+        color: white;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .x_font_w_3 {
+        color: white;
+        font-size: 20px;
+    }
+
+    .x_font_w_4 {
+        color: white;
+        font-size: 17px;
+        font-weight: 400;
+    }
+}
