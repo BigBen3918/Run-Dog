@@ -7,6 +7,8 @@ import Header from "../components/header";
 
 import tokennomic from "../components/assets/img/tokenomic.png";
 import MARK from "../components/assets/img/coinLogo.png";
+import { useBlockchainContext } from "../context";
+import { useWallet } from "use-wallet";
 
 export const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -16,17 +18,24 @@ export const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Presale(props) {
+    const [state, { buy, deposit }] = useBlockchainContext();
     const [ETHamount, setETHamount] = useState(0);
-    const [QEamount, setQEamount] = useState(0);
+    const [tokenAmount, settokenAmount] = useState(0);
+    const [loading, setLoading] = useState(false);
+    const wallet = useWallet();
 
-    const buyHandle = async () => {};
+    const buyHandle = async () => {
+        setLoading(true);
+        await buy(ETHamount);
+        setLoading(false);
+    };
 
     const onChangeETH = (e) => {
         if (e.target.value === "") {
             setETHamount(0);
-            setQEamount(0);
+            settokenAmount(0);
         } else {
-            setQEamount(e.target.value * 30000);
+            settokenAmount(e.target.value * 30000);
             setETHamount(e.target.value);
         }
     };
@@ -34,10 +43,10 @@ export default function Presale(props) {
     const onChangeQE = (e) => {
         if (e.target.value === "") {
             setETHamount(0);
-            setQEamount(0);
+            settokenAmount(0);
         } else {
             setETHamount(e.target.value / 30000);
-            setQEamount(e.target.value);
+            settokenAmount(e.target.value);
         }
     };
 
@@ -90,7 +99,7 @@ export default function Presale(props) {
                                                 <input
                                                     type="number"
                                                     onChange={onChangeQE}
-                                                    value={QEamount}
+                                                    value={tokenAmount}
                                                     className="contactAddress"
                                                     placeholder="Enter QE"
                                                 />
@@ -103,7 +112,7 @@ export default function Presale(props) {
                                 <Item>
                                     <div
                                         className="buyButton noselect align_center"
-                                        onClick={buyHandle}
+                                        onClick={wallet.status==="connected"?buyHandle:""}
                                     >
                                         Buy Token
                                     </div>
